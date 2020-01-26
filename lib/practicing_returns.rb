@@ -1,12 +1,16 @@
-require 'pry'
+
 
 def hello(array)
   i = 0
+  collection = [ "{Tim}", "{Tom}", "{Jim}" ]
   while i < array.length
-    yield(array[i])
+  collection.push (yield(array[i])) 
     i += 1
   end
 end
+  #p collection / testing if it works collection
+end
 
-binding.pry
-hello(["Tim", "Tom", "Jim"]) { |name| puts "Hi, #{name}" }
+
+
+
